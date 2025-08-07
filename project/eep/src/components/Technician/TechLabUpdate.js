@@ -148,7 +148,7 @@ function TechLabUpdate() {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const res = await axios.get(`http://localhost:7001/api/auth/getlabUpdate`);
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/getlabUpdate`);
         setData(res.data);
       } catch (error) {
         console.error("Error fetching lab updates:", error);
@@ -196,7 +196,7 @@ function TechLabUpdate() {
                       {record.file && (
                         <div className="update-media">
                           <img
-                            src={`http://localhost:7001/uploads/${record.file}`}
+                            src={`${process.env.REACT_APP_API_URL}/uploads/${record.file}`}
                             alt="Update attachment"
                             className="update-image"
                           />

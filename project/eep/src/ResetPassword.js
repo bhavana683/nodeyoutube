@@ -22,7 +22,7 @@ const ResetPassword = () => {
     try{
       const username=formData.username
       const newPassword=formData.newPassword
-      const response=await axios.post("http://localhost:7001/api/auth/ResetPassword",{
+      const response=await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/ResetPassword`,{
        username,newPassword
         
       },{

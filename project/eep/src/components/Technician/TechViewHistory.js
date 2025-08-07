@@ -11,7 +11,7 @@ const TechViewHistory = () => {
 
   const handleAccept = async (issueId) => {
     try {
-      await axios.post(`http://localhost:7001/api/auth/acceptissue/${issueId}`, {}, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/acceptissue/${issueId}`, {}, {
         headers: { Authorization: `Bearer ${token}` },
         withCredentials: true 
       });
@@ -24,7 +24,7 @@ const TechViewHistory = () => {
   useEffect(() => {
     const fetchIssues = async () => {
       try {
-        const response = await axios.get('http://localhost:7001/api/auth/pending', {
+        const response = await axios.get('${process.env.REACT_APP_API_URL}/api/auth/pending', {
           withCredentials: true
         });
         setIssues(response.data);

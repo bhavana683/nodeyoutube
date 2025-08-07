@@ -290,7 +290,7 @@ const TechIssueUpdate = () => {
     const fetchAcceptedIssues = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:7001/api/auth/acceptbytech", {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/acceptbytech`, {
           headers: { Authorization: `Bearer ${token}` },
           withCredentials: true
         });

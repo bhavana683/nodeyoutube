@@ -92,7 +92,7 @@ const InViewHistory = () => {
     const fetchIssues = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:7001/api/auth/inviewhistory",
+          `${process.env.REACT_APP_API_URL}/api/auth/inviewhistory`,
           { withCredentials: true }
         );
         setIssues(response.data);

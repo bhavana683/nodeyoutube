@@ -81,7 +81,7 @@ function LabUpdate() {
   useEffect(() => {
     const fetchUpdates = async () => {
       try {
-        const res = await axios.get(`http://localhost:7001/api/auth/getlabUpdate`);
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/getlabUpdate`);
         setUpdates(res.data);
       } catch (err) {
         console.error("Error fetching updates:", err);
@@ -136,7 +136,7 @@ function LabUpdate() {
                   {update.file && (
                     <div className="mt-3">
                       <img 
-                        src={`http://localhost:7001/uploads/${update.file}`}
+                        src={`${process.env.REACT_APP_API_URL}/uploads/${update.file}`}
                         alt="Update attachment"
                         className="max-w-full h-auto rounded border"
                         onError={(e) => e.target.style.display = 'none'}

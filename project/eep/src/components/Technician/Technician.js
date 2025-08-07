@@ -25,6 +25,9 @@ const Technician = () => {
         <Link to="/technician/techlab-update">
           <button className="navButton">Lab Updates</button>
         </Link>
+        <Link to="/technician/techissue-update">
+          <button className="navButton">Issue update</button>
+        </Link>
         
       </nav>
 

@@ -231,7 +231,7 @@ const SignIn = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:7001/api/auth/login",
+        `${process.env.REACT_APP_API_URL}/api/auth/login`,
         { username, password },
         { headers: { "Content-Type": "application/json" }, withCredentials: true }
       );

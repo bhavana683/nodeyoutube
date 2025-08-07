@@ -226,7 +226,7 @@ const UploadIssue = () => {
 
         try {
           const response = await axios.post(
-            "http://localhost:7001/api/auth/inupload-issue",{
+            `${process.env.REACT_APP_API_URL}/api/auth/inupload-issue`,{
               issue,
               description,
               labNo,
