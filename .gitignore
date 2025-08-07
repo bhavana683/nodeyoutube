@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+project/eep/node_modules/
+
+# Environment files
+.env
+
+# Build folders
+client/build/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db

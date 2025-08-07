@@ -1,0 +1,346 @@
+/* Container styles */
+.techcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: #c6bbef;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  margin-bottom: 20px;
+  color: #f7f4f4;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* History box styles */
+.historyBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styles */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+/* Label styles */
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Textarea styles */
+.textarea {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 80px;
+  resize: vertical;
+}
+
+/* Input styles */
+.input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+/* Add these styles to TechView.css */
+.techcontainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #c6bbef;
+  padding: 20px;
+  overflow: hidden; /* Prevent container from scrolling */
+}
+
+.updates-scroll-container {
+  flex: 1;
+  overflow-y: auto; /* Only this container will scroll */
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.no-updates {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.update-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.update-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.update-day {
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.update-content {
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+.update-info {
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.update-meta {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.update-author {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.update-media {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.update-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Animation for expanding */
+.update-card {
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.update-card.expanded {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Custom scrollbar */
+.updates-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.updates-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.updates-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.updates-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Tech View History Styles */
+.tech-history-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #c6bbef;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tech-history-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f7f4f4;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.tech-history-content {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.tech-history-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tech-history-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.tech-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.tech-card-header h3 {
+  margin: 0;
+  color: #3a3a3a;
+  font-size: 1.1rem;
+}
+
+.tech-card-details {
+  padding: 15px 20px;
+  background-color: white;
+}
+
+.tech-card-details p {
+  margin: 8px 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+.tech-card-details strong {
+  color: #3a3a3a;
+}
+
+.description-box {
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.accept-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.accept-button:hover {
+  background-color: #3e8e41;
+}
+
+.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.no-issues {
+  text-align: center;
+  padding: 30px;
+  color: #f7f4f4;
+  font-size: 1.1rem;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 8px;
+}
+
+/* Scrollbar styling */
+.tech-history-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tech-history-content::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+
+.tech-history-content::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 4px;
+}
+
+.tech-history-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech-history-container {
+    padding: 15px;
+  }
+  
+  .tech-history-content {
+    max-height: 65vh;
+  }
+  
+  .tech-card-header, .tech-card-details {
+    padding: 12px 15px;
+  }
+}

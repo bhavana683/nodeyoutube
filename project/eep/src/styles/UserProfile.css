@@ -1,0 +1,123 @@
+/* Existing styles remain the same */
+
+/* Light Theme (Default) */
+.profile-modal-overlay.light {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profile-modal-content.light {
+  background-color: white;
+  color: #333;
+}
+
+.profile-modal-header.light {
+  background-color: #4a6fa5;
+  color: white;
+}
+
+.profile-avatar-placeholder.light {
+  background-color: #4a6fa5;
+  color: white;
+}
+
+.profile-role-badge.light {
+  background-color: #4a6fa5;
+  color: white;
+}
+
+.profile-detail-label.light {
+  color: #555;
+}
+
+.profile-detail-value.light {
+  color: #333;
+}
+
+.profile-logout-button.light {
+  background-color: #d9534f;
+  color: white;
+}
+
+.profile-logout-button.light:hover {
+  background-color: #c9302c;
+}
+
+/* Dark Theme */
+.profile-modal-overlay.dark {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.profile-modal-content.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.profile-modal-header.dark {
+  background-color: #080707;
+  color: #fff;
+}
+
+.profile-avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.profile-avatar-placeholder.light {
+  background-color: #4a6fa5;
+  color: white;
+}
+
+.profile-avatar-placeholder.dark {
+  background-color: #080707;
+  color: white;
+}
+
+.profile-role-badge.dark {
+  background-color: #080707;
+  color: #fff;
+}
+
+.profile-detail-label.dark {
+  color: #ccc;
+}
+
+.profile-detail-value.dark {
+  color: #fff;
+}
+
+.profile-logout-button.dark {
+  background-color: #d9534f;
+  color: white;
+}
+
+.profile-logout-button.dark:hover {
+  background-color: #c9302c;
+}
+.profile-initials {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.profile-initials.light {
+  color: white;
+}
+
+.profile-initials.dark {
+  color: white;
+}
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden; /* Ensures initials stay circular */
+}

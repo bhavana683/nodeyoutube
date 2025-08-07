@@ -1,0 +1,60 @@
+.incontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: #eeeec5;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.input {
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 80%;
+}
+
+.button {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #FF8C00;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.preview {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.previewImage, .previewVideo {
+  max-width: 300px;
+  max-height: 300px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.removeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.removeButton:hover {
+  background-color: darkred;
+}

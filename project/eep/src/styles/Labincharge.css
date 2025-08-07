@@ -1,0 +1,129 @@
+.incharge-container {
+  font-family: Arial, sans-serif;
+  background: url('lab_incharge.jpg') no-repeat center center;
+  background-size: contain;
+  width:100%;
+  height: 100vh;
+  color: #0e0e0e;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #080707;
+  color:#080707
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color:#080707
+}
+
+.profileIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Add wrapping for smaller screens */
+}
+
+.navButton {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: orange;
+  color: #26e167;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mainContent {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.welcomeText {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  width: 80%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .navbar {
+    gap: 10px;
+  }
+
+  .navButton {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+ 
+}
+.preview {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.previewImage, .previewVideo {
+  max-width: 300px;
+  max-height: 300px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.removeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.removeButton:hover {
+  background-color: darkred;
+}
+.profileIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  color:#080707
+}
+
