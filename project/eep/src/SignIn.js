@@ -237,7 +237,9 @@ const SignIn = () => {
       );
 
       console.log("Login successful");
-      const { token, user } = response.data;
+      console.log("response data",response.data);
+      const  token = response.data.token;
+      const user=response.data.user;
       localStorage.setItem("token", token);
       localStorage.setItem("role", user.role);
       navigateBasedOnRole(user.role);
