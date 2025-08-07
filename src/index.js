@@ -42,10 +42,12 @@ app.use(session({
 //Routes
 app.use("/api/auth",authRoutes)
 app.use("/api/users/",userRoutes)
- app.use('/uploads', express.static( path.join('C:/Users/KRISHNA PRASAD/OneDrive/Desktop/nodeyoutube/src/file','labupload')));
+ app.use('/uploads', express.static(path.join(__dirname, 'file/labupload')));
 
 
-const PORT=process.env.PORT||7002
+
+
+const PORT=process.env.PORT||7000
 app.listen(PORT,()=>{
   console.log(`server is running at port${PORT}`)
 }
