@@ -20,7 +20,8 @@ app.use(express.urlencoded({extend:true}))
 app.use(cors({
   origin:['https://labrfrontend.onrender.com','http://localhost:3000'],
   methods:["GET" ,"POST","PUT","DELETE"],
-  credentials:true}))
+  credentials:true,
+exposeHeaders:['Authorization']}))
 app.use(cookieParser())
 app.use(session({
   secret: process.env.SESSION_SECRET || 'default-secret-key', // Use a strong secret
