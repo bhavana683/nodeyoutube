@@ -237,7 +237,7 @@ const SignIn = () => {
       );
 
       console.log("Login successful");
-      //console.log("response data",response.data);
+      console.log("response data",response.user);
       const  {token,user} = response.data;
       //const user=response.data.user;
       localStorage.setItem("token", token);
