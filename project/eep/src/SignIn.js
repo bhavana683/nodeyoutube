@@ -237,12 +237,12 @@ const SignIn = () => {
       );
 
       console.log("Login successful");
-      console.log("response data",response.user);
+      console.log("response data",response.data.user);
       const  {token,user} = response.data;
-      //const user=response.data.user;
+      const user1=response.data.user;
       localStorage.setItem("token", token);
-      localStorage.setItem("user",JSON.stringify(user));
-      navigateBasedOnRole(user.role);
+      localStorage.setItem("user",JSON.stringify(user1));
+      navigateBasedOnRole(user1.role);
     } catch (err) {
       console.log(err);
     }
