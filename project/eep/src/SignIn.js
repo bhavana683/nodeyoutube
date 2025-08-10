@@ -236,8 +236,8 @@ const SignIn = () => {
         { headers: { "Content-Type": "application/json" }, withCredentials: true }
       );
 
-      console.log("Login successful");
-      console.log("response data",response.data.user);
+     
+      console.log("response data",response.data.role);
       const  {token,user} = response.data;
       const user1=response.data.user;
       localStorage.setItem("token", token);
