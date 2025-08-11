@@ -412,7 +412,26 @@ const login = async (req, res) => {
     req.session.userEmail = user.username;
  req.session.userId = user._id;
     req.session.role = user.role;
+ // Explicitly save the session
+    await new Promise((resolve, reject) => {
+      req.session.save(err => {
+        if (err) {
+          console.error('Session save error:', err);
+          reject(err);
+        } else {
+          resolve();
+        }
+      });
+    });
 
+    // Set cookie manually to ensure it's sent
+    res.cookie('connect.sid', req.sessionID, {
+      maxAge: 24 * 60 * 60 * 1000,
+      httpOnly: true,
+      secure: true,
+      sameSite: 'none',
+      domain: '.onrender.com'
+    });
     
     
     return res.status(200).json({

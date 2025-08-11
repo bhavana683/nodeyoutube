@@ -22,7 +22,7 @@ app.use(cors({
   methods:["GET" ,"POST","PUT","DELETE"],
   credentials:true,
  exposedHeaders: ['Authorization', 'Set-Cookie'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'Cookie']}))
+  allowedHeaders: ['Content-Type', 'Authorization', 'Cookie','Accept']}))
 app.use(cookieParser())
 app.use(session({
   secret: process.env.SESSION_SECRET || 'default-secret-key', // Use a strong secret
@@ -39,7 +39,7 @@ app.use(session({
     httpOnly: true,
     secure: true, // HTTPS in production
     sameSite: 'none',
-       domain: process.env.NODE_ENV === 'production' ? '.onrender.com' : undefined
+       domain: '.onrender.com'
   }
 }));
 //Routes

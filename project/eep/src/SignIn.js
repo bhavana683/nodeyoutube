@@ -235,7 +235,8 @@ const SignIn = () => {
         { username, password },
         { headers: { "Content-Type": "application/json" ,
            "Accept": "application/json" // Explicitly accept JSON
-        }, withCredentials: true }
+        }, withCredentials: true,
+      credentials:'include' }
       );
 
      
