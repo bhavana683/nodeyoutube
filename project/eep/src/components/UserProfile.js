@@ -172,7 +172,7 @@ const UserProfile = ({ theme = 'light' }) => {
         const sessionResponse = await axios.get(`https://labrequirement.onrender.com/api/auth/session`, {
           withCredentials: true
         });
-        
+        console.log(sessionResponse.data.userEmail)
         const userEmail = sessionResponse.data.userEmail;
         
         if (!userEmail) {

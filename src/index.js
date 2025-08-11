@@ -21,7 +21,8 @@ app.use(cors({
   origin:"https://labrfrontend.onrender.com",
   methods:["GET" ,"POST","PUT","DELETE"],
   credentials:true,
-exposeHeaders:['Authorization']}))
+ exposedHeaders: ['Authorization', 'Set-Cookie'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Cookie']}))
 app.use(cookieParser())
 app.use(session({
   secret: process.env.SESSION_SECRET || 'default-secret-key', // Use a strong secret
@@ -36,8 +37,9 @@ app.use(session({
   cookie: {
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production', // HTTPS in production
-    sameSite: 'lax'
+    secure: true, // HTTPS in production
+    sameSite: 'none',
+       domain: process.env.NODE_ENV === 'production' ? '.onrender.com' : undefined
   }
 }));
 //Routes
