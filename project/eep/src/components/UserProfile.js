@@ -169,9 +169,11 @@ const UserProfile = ({ theme = 'light' }) => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const sessionResponse = await axios.get(`https://labrequirement.onrender.com/api/auth/session`, {
-          withCredentials: true
-        });
+        const sessionResponse = await axios.get(`https://labrequirement.onrender.com/api/auth/session`, 
+        { headers: { "Content-Type": "application/json" ,
+           "Accept": "application/json" // Explicitly accept JSON
+        }, withCredentials: true,
+      credentials:'include' });
         console.log(sessionResponse.data.userEmail)
         const userEmail = sessionResponse.data.userEmail;
         
