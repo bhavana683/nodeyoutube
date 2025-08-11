@@ -18,7 +18,7 @@ app.use(express.urlencoded({extend:true}))
 
 
 app.use(cors({
-  origin:['https://labrfrontend.onrender.com','http://localhost:3000'],
+  origin:"https://labrfrontend.onrender.com",
   methods:["GET" ,"POST","PUT","DELETE"],
   credentials:true,
 exposeHeaders:['Authorization']}))
