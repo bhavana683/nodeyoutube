@@ -169,7 +169,7 @@ const UserProfile = ({ theme = 'light' }) => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const sessionResponse = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/session`, {
+        const sessionResponse = await axios.get(`https://labrequirement.onrender.com/api/auth/session`, {
           withCredentials: true
         });
         
@@ -180,7 +180,7 @@ const UserProfile = ({ theme = 'light' }) => {
           return;
         }
 
-        const userResponse = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/user?email=${userEmail}`, {
+        const userResponse = await axios.get(`https://labrequirement.onrender.com/api/auth/user?email=${userEmail}`, {
           withCredentials: true
         });
         
@@ -227,7 +227,7 @@ const UserProfile = ({ theme = 'light' }) => {
   // Logout handler
   const handleLogout = async () => {
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/logout`, {}, {
+      await axios.post(`https://labrequirement.onrender.com/api/auth/logout`, {}, {
         withCredentials: true
       });
       navigate('/SignIn');

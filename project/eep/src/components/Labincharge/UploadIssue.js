@@ -226,7 +226,7 @@ const UploadIssue = () => {
 
         try {
           const response = await axios.post(
-            `${process.env.REACT_APP_API_URL}/api/auth/inupload-issue`,{
+            `https://labrequirement.onrender.com/api/auth/inupload-issue`,{
               issue,
               description,
               labNo,

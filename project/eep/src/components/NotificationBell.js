@@ -11,7 +11,7 @@ const NotificationBell = () => {
     const fetchNotifications = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:7001/api/auth/notifications", {
+        const response = await axios.get("https://labrequirement.onrender.com/api/auth/notifications", {
           headers: { Authorization: `Bearer ${token}` },
           withCredentials: true
         });

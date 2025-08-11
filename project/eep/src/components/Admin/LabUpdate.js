@@ -81,7 +81,7 @@ function LabUpdate() {
   useEffect(() => {
     const fetchUpdates = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/getlabUpdate`);
+        const res = await axios.get(`https://labrequirement.onrender.com/api/auth/getlabUpdate`);
         setUpdates(res.data);
       } catch (err) {
         console.error("Error fetching updates:", err);

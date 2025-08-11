@@ -23,7 +23,7 @@ const InLabUpdate = () => {
   console.log(key, value);
 }
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/auth/upload`,formdata
+        `https://labrequirement.onrender.com/api/auth/upload`,formdata
        // {title,updatedBy,info,day,file }
 
         

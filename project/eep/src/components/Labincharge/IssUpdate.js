@@ -87,7 +87,7 @@ const IssueUpdatesList = () => {
     const fetchUserUpdates = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/issueupdates`, {
+        const response = await axios.get(`https://labrequirement.onrender.com/api/auth/issueupdates`, {
           headers: { Authorization: `Bearer ${token}` },
           withCredentials: true
         });

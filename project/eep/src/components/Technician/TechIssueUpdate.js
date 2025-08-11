@@ -290,7 +290,7 @@ const TechIssueUpdate = () => {
     const fetchAcceptedIssues = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/acceptbytech`, {
+        const response = await axios.get(`https://labrequirement.onrender.com/api/auth/acceptbytech`, {
           headers: { Authorization: `Bearer ${token}` },
           withCredentials: true
         });
@@ -310,7 +310,7 @@ const TechIssueUpdate = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        `http://localhost:7001/api/auth/issues/${selectedIssue}/updates`,
+        `https://labrequirement.onrender.com/api/auth/issues/${selectedIssue}/updates`,
         { 
           issueDescription,
           solvedBy,
@@ -332,7 +332,7 @@ const TechIssueUpdate = () => {
       setIsCompleted(false);
       
       // Refresh accepted issues list
-      const response = await axios.get("http://localhost:7001/api/auth/acceptbytech", {
+      const response = await axios.get("https://labrequirement.onrender.com/api/auth/acceptbytech", {
         headers: { Authorization: `Bearer ${token}` },
         withCredentials: true
       });

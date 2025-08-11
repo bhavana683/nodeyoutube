@@ -10,7 +10,7 @@ const ViewHistory = () => {
   useEffect(() => {
     const fetchIssues = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/inviewhistory`);
+        const response = await axios.get(`https://labrequirement.onrender.com/api/auth/inviewhistory`);
         setIssues(response.data);
       } catch (error) {
         console.error("Error fetching issues:", error);
