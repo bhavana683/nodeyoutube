@@ -231,7 +231,7 @@ const SignIn = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/api/auth/login`,
+        `https://labrequirement.onrender.com/api/auth/login`,
         { username, password },
         { headers: { "Content-Type": "application/json" ,
            "Accept": "application/json" // Explicitly accept JSON
