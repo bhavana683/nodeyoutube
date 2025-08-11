@@ -410,13 +410,23 @@ const login = async (req, res) => {
 
     // Set session
     req.session.userEmail = user.username;
+ req.session.userId = user._id;
+    req.session.role = user.role;
 
+     req.session.save(err => {
+      if (err) {
+        console.error('Session save error:', err);
+        return res.status(500).json({
+          success: false,
+          message: "Session error"
+        });
+      }
     return res.status(200).json({
       success: true,
       message: "Login successful",
       token,
       role:user.role,
-      mail:session.userEmail,
+      mail:req.session.userEmail,
       user: {
         id: user._id,
         username: user.username,

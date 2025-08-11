@@ -30,7 +30,7 @@ app.use(session({
   saveUninitialized: false,
   store: MongoStore.create({
     mongoUrl: process.env.CONNECTION_STRING, // MongoDB connection string
-    ttl: 7 * 24 * 60 * 60, // 7 days in seconds
+    ttl: 24 * 60 * 60, // 7 days in seconds
     autoRemove: 'native', // Use MongoDB's TTL index
     collectionName: 'sessions' // Collection to store sessions
   }),
