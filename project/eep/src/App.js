@@ -25,7 +25,7 @@ import TechDashboard from 'components/Technician/TechDashboard';
 import TechIssueUpdate from 'components/Technician/TechIssueUpdate';
 import  TechViewHistory from 'components/Technician/TechViewHistory';
 import TechLabUpdate from 'components/Technician/TechLabUpdate'
-import { GoogleOAuthProvider, GoogleLogin ,useGoogleLogin} from "@react-oauth/google";
+
 const App = () => {
 
   
