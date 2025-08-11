@@ -413,14 +413,8 @@ const login = async (req, res) => {
  req.session.userId = user._id;
     req.session.role = user.role;
 
-     req.session.save(err => {
-      if (err) {
-        console.error('Session save error:', err);
-        return res.status(500).json({
-          success: false,
-          message: "Session error"
-        });
-      }
+    
+    
     return res.status(200).json({
       success: true,
       message: "Login successful",
