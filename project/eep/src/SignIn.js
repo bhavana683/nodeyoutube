@@ -238,6 +238,10 @@ const SignIn = () => {
 
      
       console.log("response data",response.data.role);
+      const r=JSON.parse(response.data);
+  console.log(r);
+
+
       const  {token,user} = response.data;
       const user1=response.data.user;
       localStorage.setItem("token", token);
