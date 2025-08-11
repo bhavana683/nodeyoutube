@@ -264,6 +264,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
 const axios = require('axios');
+const session = require("express-session");
 require('dotenv').config();
 
 // Helper function to validate email
@@ -415,6 +416,7 @@ const login = async (req, res) => {
       message: "Login successful",
       token,
       role:user.role,
+      mail:session.userEmail,
       user: {
         id: user._id,
         username: user.username,

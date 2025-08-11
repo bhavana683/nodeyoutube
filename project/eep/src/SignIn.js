@@ -240,6 +240,7 @@ const SignIn = () => {
 
      
       console.log("response data",response.data.role);
+      console.log("session :",response.data.mail);
       
 
 
