@@ -610,12 +610,12 @@ const logout = async (req, res) => {
 // Get session data
 const getSession = async (req, res) => {
   try {
-    if (!req.session.userEmail) {
+   /* if (!req.session.userEmail) {
       return res.status(401).json({
         success: false,
         message: "Session not found"
       });
-    }
+    }*/
 
     return res.status(200).json({
       success: true,
