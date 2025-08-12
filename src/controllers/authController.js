@@ -410,15 +410,7 @@ const login = async (req, res) => {
 
     // Set session
     req.session.userEmail = user.username;
- req.session.userId = user._id;
-    req.session.role = user.role;
 
-    req.session.user = {
-      id: user._id,
-      email: user.username,
-      role: user.role,
-      name: user.name
-    };
  // Explicitly save the session
    await new Promise((resolve, reject) => {
       req.session.save(err => {
