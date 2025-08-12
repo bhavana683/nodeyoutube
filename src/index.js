@@ -109,7 +109,7 @@ const sessionConfig = {
    httpOnly:true,
     secure: true, // HTTPS only in production
     sameSite:  'none' ,
-    domain: process.env.NODE_ENV === 'production' ? '.onrender.com' : undefined
+    domain:'.onrender.com' 
   }
 };
 
