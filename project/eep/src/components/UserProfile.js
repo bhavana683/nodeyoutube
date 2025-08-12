@@ -173,7 +173,7 @@ const UserProfile = ({ theme = 'light' }) => {
         { headers: { "Content-Type": "application/json" ,
            "Accept": "application/json" // Explicitly accept JSON
         }, withCredentials: true,
-      credentials:'include' });
+      credentials:true });
         console.log(sessionResponse.data.userEmail)
         const userEmail = sessionResponse.data.userEmail;
         
