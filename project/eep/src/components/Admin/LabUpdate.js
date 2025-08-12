@@ -136,7 +136,7 @@ function LabUpdate() {
                   {update.file && (
                     <div className="mt-3">
                       <img 
-                        src={`${process.env.REACT_APP_API_URL}/uploads/${update.file}`}
+                        src={`https://labrequirement.onrender.com/uploads/${update.file}`}
                         alt="Update attachment"
                         className="max-w-full h-auto rounded border"
                         onError={(e) => e.target.style.display = 'none'}
