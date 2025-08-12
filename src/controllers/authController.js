@@ -413,7 +413,7 @@ const login = async (req, res) => {
  req.session.userId = user._id;
     req.session.role = user.role;
  // Explicitly save the session
-    await new Promise((resolve, reject) => {
+   /* await new Promise((resolve, reject) => {
       req.session.save(err => {
         if (err) {
           console.error('Session save error:', err);
@@ -432,7 +432,7 @@ const login = async (req, res) => {
       sameSite: 'none',
       domain: '.onrender.com'
     });
-    
+    */
     
     return res.status(200).json({
       success: true,
