@@ -79,19 +79,19 @@ app.use(express.urlencoded({ extended: true })); // Fixed typo from 'extend' to 
 
 // CORS Configuration
 app.use(cors({
-  origin: "https://labrfrontend.onrender.com",
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: process.env.FRONTEND_URL || "https://labrfrontend.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
   exposedHeaders: ['Set-Cookie'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'Cookie', 'Accept']
+  allowedHeaders: ['Content-Type', 'Authorization', 'Cookie', 'Accept', 'X-Requested-With']
 }));
 
 // Cookie and Session Middleware
 app.use(cookieParser());
 
 // Session Configuration
-app.use(session({
-  name: 'labr.sid', // Custom session cookie name
+const sessionConfig = {
+  name: 'labr.sid',
   secret: process.env.SESSION_SECRET || 'default-secret-key',
   resave: false,
   saveUninitialized: false,
@@ -107,11 +107,14 @@ app.use(session({
   cookie: {
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production', // HTTPS only in production
+    secure: true, // HTTPS only in production
     sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
     domain: process.env.NODE_ENV === 'production' ? '.onrender.com' : undefined
   }
-}));
+};
+
+// Apply session middleware
+app.use(session(sessionConfig));
 
 // Trust proxy in production
 if (process.env.NODE_ENV === 'production') {

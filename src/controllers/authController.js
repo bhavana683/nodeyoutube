@@ -412,8 +412,15 @@ const login = async (req, res) => {
     req.session.userEmail = user.username;
  req.session.userId = user._id;
     req.session.role = user.role;
+
+    req.session.user = {
+      id: user._id,
+      email: user.username,
+      role: user.role,
+      name: user.name
+    };
  // Explicitly save the session
-   /* await new Promise((resolve, reject) => {
+   await new Promise((resolve, reject) => {
       req.session.save(err => {
         if (err) {
           console.error('Session save error:', err);
@@ -432,7 +439,7 @@ const login = async (req, res) => {
       sameSite: 'none',
       domain: '.onrender.com'
     });
-    */
+    
     
     return res.status(200).json({
       success: true,
@@ -603,7 +610,7 @@ const logout = async (req, res) => {
 // Get session data
 const getSession = async (req, res) => {
   try {
-    if (!req.session.userEmail) {
+    if (!req.session.user) {
       return res.status(401).json({
         success: false,
         message: "Session not found"
@@ -612,7 +619,13 @@ const getSession = async (req, res) => {
 
     return res.status(200).json({
       success: true,
-      userEmail: req.session.userEmail
+      userEmail: req.session.userEmail,
+       session: {
+        id: req.session.user.id,
+        email: req.session.user.email,
+        role: req.session.user.role,
+        name: req.session.user.name
+      }
     });
 
   } catch (error) {
