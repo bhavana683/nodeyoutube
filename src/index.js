@@ -109,7 +109,7 @@ const sessionConfig = {
    httpOnly:true,
     secure: true, // HTTPS only in production
     sameSite:  'none' ,
-    domain:'.onrender.com' 
+    domain:'labrequirement.onrender.com'
   }
 };
 

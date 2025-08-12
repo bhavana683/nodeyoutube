@@ -338,7 +338,12 @@ const register = async (req, res) => {
       process.env.JWT_SECRET,
       { expiresIn: '1h' }
     );
-
+req.session.user = {
+  id: user._id,
+  email: user.username,
+  role: user.role,
+  name: user.name
+};
     // Set session
     req.session.userEmail = username;
 
