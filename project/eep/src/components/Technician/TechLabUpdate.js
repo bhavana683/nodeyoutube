@@ -196,7 +196,7 @@ function TechLabUpdate() {
                       {record.file && (
                         <div className="update-media">
                           <img
-                            src={`${process.env.REACT_APP_API_URL}/uploads/${record.file}`}
+                            src={`https://labrequirement.onrender.com/uploads/${record.file}`}
                             alt="Update attachment"
                             className="update-image"
                           />
