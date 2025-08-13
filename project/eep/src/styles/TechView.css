@@ -74,20 +74,24 @@
 .techcontainer {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  align-items: center;
+  justify-content: flex-start; /* So content starts at the top */
+  min-height: 100vh;
   background-color: #c6bbef;
   padding: 20px;
-  overflow: hidden; /* Prevent container from scrolling */
+  overflow: hidden; /* Prevent outer scroll */
 }
 
 .updates-scroll-container {
-  flex: 1;
-  overflow-y: auto; /* Only this container will scroll */
-  padding: 10px;
-  margin-top: 20px;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 600px;
+  max-height: 60vh; /* Adjust as needed */
+  overflow-y: auto;
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .no-updates {

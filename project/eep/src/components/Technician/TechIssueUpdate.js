@@ -365,6 +365,7 @@ const TechIssueUpdate = () => {
       </div>
 
       {selectedIssue && (
+          <div className="updates-scroll-container">
         <form onSubmit={handleSubmitUpdate} className="update-form">
           <div className="section">
             <textarea
@@ -424,6 +425,7 @@ const TechIssueUpdate = () => {
             Post Issue Update
           </button>
         </form>
+        </div>
       )}
     </div>
   );
