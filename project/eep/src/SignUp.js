@@ -247,7 +247,7 @@ const SignUp = () => {
     }
 
     try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, {
+      await axios.post(`https://labrequirement.onrender.com/api/auth/register`, {
         username: formData.username,
         password: formData.password,
         role: formData.role,
