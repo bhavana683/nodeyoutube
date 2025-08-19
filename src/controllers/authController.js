@@ -347,7 +347,7 @@ req.session.user = {
     // Set session
     req.session.userEmail = username;
 
-    return res.status(201).json({
+    return res.status(200).json({
       success: true,
       message: "User registered successfully",
       token,
