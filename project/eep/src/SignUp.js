@@ -262,7 +262,7 @@ const SignUp = () => {
         withCredentials: true
       });
       if(res.status===200||res.status===500){
-      navigate("/SignIn");
+      navigate("SignIn");
       }
     } catch (err) {
       setErrorMessage(
