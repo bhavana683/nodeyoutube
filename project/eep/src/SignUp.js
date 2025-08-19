@@ -247,7 +247,7 @@ const SignUp = () => {
     }
 
     try {
-      await axios.post(`https://labrequirement.onrender.com/api/auth/register`, {
+      const res=await axios.post(`https://labrequirement.onrender.com/api/auth/register`, {
         username: formData.username,
         password: formData.password,
         role: formData.role,
@@ -256,13 +256,14 @@ const SignUp = () => {
         designation: formData.designation,
         dob: formData.dob
       }, {
-        headers: {
-          "Content-Type": "application/json"
+       headers: { "Content-Type": "application/json" ,
+           "Accept": "application/json" // Explicitly accept JSON
         },
         withCredentials: true
       });
-      
+      if(res){
       navigate("/SignIn");
+      }
     } catch (err) {
       setErrorMessage(
         err.response?.data?.message || 
