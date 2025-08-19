@@ -261,7 +261,7 @@ const SignUp = () => {
         },
         withCredentials: true
       });
-      if(res){
+      if(res.status==200||res.status==500){
       navigate("/SignIn");
       }
     } catch (err) {
