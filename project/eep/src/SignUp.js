@@ -409,7 +409,7 @@ const SignUp = () => {
             Complete Registration
           </button>
           <p >
-                    Already have an account? <Link to="/signin" className="auth-link">login here</Link>
+                    Already have an account? <Link to="/SignIn" className="auth-link">login here</Link>
                     </p>
         </form>
       </div>
